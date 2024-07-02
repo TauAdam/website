@@ -56,17 +56,28 @@
 
 </body>
 <script>
-	const popover = document.getElementById("custom-popover")
+  const popover = document.getElementById("custom-popover");
+  const button = document.querySelector("button[popovertarget='custom-popover']");
 
-	// ...
+  button.addEventListener("click", () => {
+    if (popover.style.display === "none" || !popover.style.display) {
+      popover.style.display = "block";
+      popover.classList.remove("closing");
+    } else {
+      popover.classList.add("closing");
+      setTimeout(() => {
+        popover.style.display = "none";
+      }, 300); // Match this to fadeOut animation duration
+    }
+  });
 
-	popover.addEventListener("beforetoggle", (event) => {
-		if (event.newState === "open") {
-			console.log("Popover is being shown")
-		} else {
-			console.log("Popover is being hidden")
-		}
-	});
+  popover.addEventListener("beforetoggle", (event) => {
+    if (event.newState === "open") {
+      console.log("Popover is being shown");
+    } else {
+      console.log("Popover is being hidden");
+    }
+  });
 
 </script>
 
