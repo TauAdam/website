@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Biba boba</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<h1>popover Api</h1>
+
+	<p>The Popover API provides developers with a standard, consistent, flexible mechanism for displaying popover content
+		on top of other page content. Popover content can be controlled either declaratively using HTML attributes, or via
+		JavaScript.
+
+	</p>
+
+	<p>A very common pattern on the web is to show content over the top of other content, drawing the user's attention to
+		specific important information or actions that need to be taken. This content can take several different names —
+		overlays, popups, popovers, dialogs, etc. We will refer to them as popovers through the documentation. Generally
+		speaking, these can be:</p>
+
+
+	<ul>
+		<li>modal, meaning that while a popover is being shown, the rest of the page is rendered non-interactive until the
+			popover is actioned in some way (for example an important choice is made).
+
+		</li>
+		<li> non-modal, meaning that the rest of the page can be interacted with while the popover is being shown.</li>
+	</ul>
+	<button popovertarget="custom-popover">
+		Open images in popover
+	</button>
+
+	<div id="custom-popover" popover>
+
+		<picture>
+			<source media="(min-width:1024px)" srcset="./boba_card3.png">
+			<source media="(min-width:640px)" srcset="./boba_card2.png">
+			<img src="./boba_card1.png" alt="logo" style="width:auto;">
+		</picture>
+
+
+	</div>
+
+</body>
+
+</html>
