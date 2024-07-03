@@ -1,4 +1,4 @@
-# website that shows possibilities of popover api
+# website that shows possibilities of popover api and simple horizontal progressbar
 
 ## How to use
 
@@ -13,4 +13,4 @@ git clone
 ## Features
 
 - [x] Popover
-
+- [x] Progressbar
